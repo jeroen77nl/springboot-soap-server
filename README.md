@@ -1,6 +1,6 @@
 # springboot3-soap-server
 
-This application is a modern variant of a demo by Java Techie (https://www.youtube.com/watch?v=ceSqN3CWd14). The main changes are:
+This application is a modern variant of a demo by Java Techie (https://www.youtube.com/watch?v=ceSqN3CWd14). The important changes are:
 
 - Spring Boot 2 -> 3.x
 - XJC plugin 1.6 -> 3.x
@@ -8,6 +8,7 @@ This application is a modern variant of a demo by Java Techie (https://www.youtu
   - XSD in its own directory under properties (prevents XJC errors)
 - Java 8 -> 17 
 - Test messages added
+- Location generated sources: /src -> /target
 
 # view wsdl
 
