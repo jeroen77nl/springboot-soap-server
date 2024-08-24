@@ -10,9 +10,12 @@ This application is a modern variant of a demo by Java Techie (https://www.youtu
 - Test messages added
 - Location generated sources: /src -> /target
 
+The jaxb2-maven-plugin will compile loaneligibility.xsd into fully annotated java classes. The plugin uses the XJC tool as a code-generation engine.
+
+
 # view wsdl
 
-Spring Boot generates a WSDL based on the XSD.
+Spring Boot generates a WSDL based on the XSD, so no need to create one by hand.
 Url: http://localhost:8080/ws/loanEligibility.wsdl
 
 # testberichten
