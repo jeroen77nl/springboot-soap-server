@@ -3,9 +3,7 @@
 This application is a modern variant of a demo by Java Techie (https://www.youtube.com/watch?v=ceSqN3CWd14). The important changes are:
 
 - Spring Boot 2 -> 3.x
-- XJC plugin 1.6 -> 3.x
-  - schemaDirectory -> sources
-  - XSD in its own directory under properties (prevents XJC errors)
+- Other plugin with JAXB3 support: org.jvnet.jaxb/jaxb-maven-plugin
 - Java 8 -> 17 
 - Test messages added
 - Location generated sources: /src -> /target
