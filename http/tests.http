@@ -1,0 +1,11 @@
+POST http://localhost:8080/ws HTTP/1.1
+Content-Type: text/xml;charset=UTF-8
+
+< approved.xml
+
+###
+
+POST http://localhost:8080/ws HTTP/1.1
+Content-Type: text/xml;charset=UTF-8
+
+< denied.xml
