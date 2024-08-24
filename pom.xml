@@ -75,7 +75,7 @@
           <sources>
             <source>${project.basedir}/src/main/resources/xsd/</source>
           </sources>
-          <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+          <outputDirectory>${project.basedir}/target/generated/src/main/java</outputDirectory>
           <clearOutputDir>false</clearOutputDir>
         </configuration>
       </plugin>
