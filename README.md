@@ -7,9 +7,9 @@ This application is a modern variant of a demo by Java Techie (https://www.youtu
 - Java 8 -> 17 
 - Test messages added
 - Location generated sources: /src -> /target
+- Maven wrapper added
 
-The jaxb2-maven-plugin will compile loaneligibility.xsd into fully annotated java classes. The plugin uses the XJC tool as a code-generation engine.
-
+The jaxb2-maven-plugin will compile loaneligibility.xsd into fully annotated java classes. The plugin uses the generate tool as a code-generation engine.
 
 # view wsdl
 
