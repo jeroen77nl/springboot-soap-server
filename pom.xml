@@ -9,10 +9,10 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>nl.jeroen</groupId>
-  <artifactId>spring-boot-soap-ws</artifactId>
+  <artifactId>springboot3-soap-server</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>spring-boot-soap-ws</name>
-  <description>Demo project for Spring Boot</description>
+  <name>springboot3-soap-server</name>
+  <description>Spring Boot 3 SOAP server</description>
   <url/>
   <licenses>
     <license/>
@@ -60,23 +60,31 @@
       </plugin>
       <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin -->
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jaxb2-maven-plugin</artifactId>
-        <version>3.2.0</version>
+        <groupId>org.jvnet.jaxb</groupId>
+        <artifactId>jaxb-maven-plugin</artifactId>
+        <version>4.0.8</version>
         <executions>
           <execution>
-            <id>xjc</id>
+            <id>generate</id>
             <goals>
-              <goal>xjc</goal>
+              <goal>generate</goal>
             </goals>
           </execution>
         </executions>
         <configuration>
-          <sources>
-            <source>${project.basedir}/src/main/resources/xsd/</source>
-          </sources>
-          <outputDirectory>${project.basedir}/target/generated-sources/main/java</outputDirectory>
-          <clearOutputDir>false</clearOutputDir>
+          <extension>true</extension>
+          <args>
+            <arg>-wsdl</arg>
+          </args>
+          <plugins>
+            <plugin>
+              <groupId>org.jvnet.jaxb</groupId>
+              <artifactId>jaxb-plugins</artifactId>
+              <version>4.0.8</version> <!-- same as maven-plugin version -->
+            </plugin>
+          </plugins>
+          <schemaDirectory>${project.basedir}/src/main/resources/xsd</schemaDirectory>
+          <generateDirectory>${project.basedir}/target/generated-sources/main/java</generateDirectory>
         </configuration>
       </plugin>
     </plugins>
